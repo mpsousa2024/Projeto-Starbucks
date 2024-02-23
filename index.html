@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Starbucks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        
+        <div class="circulo"></div>
+
+        <div class="nav-bar">
+
+            <img src="./img/imglogo.png" class="logo">
+
+            <nav>
+                <ul id="menu-list">
+
+                    <li class="nav-li"> <a class="nav-link">Menu</a> </li>
+                    <li class="nav-li"> <a class="nav-link">Our Coffee</a> </li>
+                    <li class="nav-li"> <a class="nav-link">Find a Store</a> </li>
+                    <li class="nav-li"> <a class="nav-link">Buy here</a> </li>
+
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="conteudo">
+
+            <div class="caixa-texto">
+
+                <h1>It's not just coffe <br>It'i <span>Starbucks</span></h1>
+                <p>The basic need of the human heart during a major crisis is a good cup of hot coffee!</p>
+                <button>Learn More</button>
+
+            </div>
+
+            <div class="caixa-imagem">
+
+                <img src="./img/img10v.png" class="starbucks">
+
+            </div>
+
+        </div>
+
+        <div class="menu">
+
+            <img src="./img/img1v.png" class="botao-menu"
+                onclick="trocaImagem('./img/img10v.png'); trocaCor('#017143'); ">
+            <img src="./img/img2a.png" class="botao-menu"
+                onclick="trocaImagem('./img/img20a.png'); trocaCor('#eb7495'); ">
+            <img src="./img/img3r.png" class="botao-menu"
+                onclick="trocaImagem('./img/img30r.png'); trocaCor('#d752b1'); ">
+
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    let imagem = document.querySelector(".starbucks")
+    let circulo = document.querySelector(".circulo")
+    const span = document.querySelector("span")
+    const button = document.querySelector("button")
+
+
+    function trocaImagem(endereco) {
+        imagem.src = endereco
+    }
+
+    function trocaCor(cor) {
+        circulo.style.background = cor
+        button.style.background = cor
+        span.style.color = cor
+    }
+
+</script>
+
+</html>
